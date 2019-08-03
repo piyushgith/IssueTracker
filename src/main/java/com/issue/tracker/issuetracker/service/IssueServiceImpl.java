@@ -29,4 +29,9 @@ public class IssueServiceImpl implements IssueService {
 		return issueRepository.save(iss);
 	}
 
+	@Override
+	public void deleteIssue(long id) {
+		issueRepository.deleteById(id);
+	}
+
 }

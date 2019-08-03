@@ -18,4 +18,6 @@ public interface IssueService {
 	void saveIssue(Issue iss);
 
 	Issue changeStatus(Issue iss);
+	
+	void deleteIssue(long id);
 }

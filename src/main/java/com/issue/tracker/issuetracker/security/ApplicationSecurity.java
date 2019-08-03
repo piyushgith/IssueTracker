@@ -37,10 +37,10 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
          .authorizeRequests()
          .antMatchers(HttpMethod.GET, "/hi**").hasAnyRole("USER","ADMIN")
          .antMatchers(HttpMethod.GET, "/getIssues/**").hasAnyRole("USER","ADMIN")
-         .antMatchers(HttpMethod.POST, "/saveIssue").hasRole("ADMIN")
-         .antMatchers(HttpMethod.PUT, "/updateIssue/**").hasRole("ADMIN")
+         .antMatchers(HttpMethod.POST, "/saveIssue").hasAnyRole("USER","ADMIN")
+         .antMatchers(HttpMethod.PUT, "/updateIssue**").hasAnyRole("USER","ADMIN")
          //.antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
-         .antMatchers(HttpMethod.DELETE, "/deleteIssue/**").hasRole("ADMIN")
+         .antMatchers(HttpMethod.DELETE, "/deleteIssue**").hasRole("ADMIN")
          .and()
          .csrf().disable()
          .formLogin().disable();
