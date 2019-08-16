@@ -1,4 +1,4 @@
-package com.issue.tracker.issuetracker.security;
+/*package com.issue.tracker.issuetracker.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -51,3 +51,4 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 }
+*/
