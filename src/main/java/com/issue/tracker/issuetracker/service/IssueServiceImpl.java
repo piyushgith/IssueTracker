@@ -1,6 +1,7 @@
 package com.issue.tracker.issuetracker.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,11 @@ public class IssueServiceImpl implements IssueService {
 	@Override
 	public void deleteIssue(long id) {
 		issueRepository.deleteById(id);
+	}
+
+	@Override
+	public Optional<Issue> searchIssueById(long id) {
+		return issueRepository.findById(id);
 	}
 
 }
